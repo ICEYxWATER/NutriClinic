@@ -1,0 +1,129 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AyuDiet Connect</title>
+<style>
+:root{color-scheme:light;--green:#154d3d;--mint:#e6f1e7;--ink:#172f28;--line:#dce6dd}*{box-sizing:border-box}body{margin:0;background:#f5f7f2;color:var(--ink);font:15px system-ui}header{background:#103f33;color:white;padding:20px max(5vw,20px);display:flex;justify-content:space-between;align-items:center;gap:12px}header strong{font:26px Georgia}header small{background:#ffffff22;padding:7px 12px;border-radius:30px}main{max-width:1200px;margin:auto;padding:28px 24px}.hero{background:linear-gradient(115deg,#e1efe3,#f2f0dc);border-radius:22px;padding:28px 32px;margin-bottom:22px}h1,h2{font-family:Georgia;margin:0 0 12px}h1{font-size:clamp(28px,5vw,44px)}h2{font-size:23px}.hero p{margin:0}.eyebrow{font-size:11px;letter-spacing:.16em;font-weight:800;text-transform:uppercase;color:#376253;margin-bottom:9px}.layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:18px}.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:16px}.toolbar,.fields,.totals{display:flex;gap:9px;flex-wrap:wrap;align-items:end}.toolbar{justify-content:space-between;align-items:center}.toolbar h2{margin:0}button,input,select,textarea{font:inherit}button{border:0;border-radius:8px;background:var(--green);color:white;padding:9px 13px;cursor:pointer;font-weight:650}button.secondary{background:var(--mint);color:var(--green)}button:disabled{opacity:.5;cursor:default}input,select,textarea{width:100%;padding:9px;border:1px solid #9cafa4;border-radius:8px;background:white;color:var(--ink)}label{display:block;flex:1;min-width:90px;font-size:13px;font-weight:650}label>*{margin-top:4px}.patient{display:block;text-align:left;width:100%;margin:8px 0;background:#f0f5ee;color:var(--ink)}.patient[aria-pressed=true]{background:var(--green);color:white}.patient small{display:block;font-weight:400;margin-top:3px}.muted{color:#486358}.totals>div{flex:1;min-width:90px;padding:12px;background:#eef5ed;border-radius:9px}.totals strong{font-size:22px;display:block}.table{overflow:auto}table{width:100%;border-collapse:collapse;margin:12px 0}th,td{text-align:left;padding:9px 6px;border-bottom:1px solid var(--line)}th{font-size:12px}.badge{background:var(--mint);padding:6px 10px;border-radius:20px;font-size:12px}.stack label{margin:9px 0}.stack button{margin-top:6px}dialog{border:1px solid var(--line);border-radius:16px;width:min(460px,92vw);padding:22px}dialog::backdrop{background:#082d2288}.foot{font-size:12px;color:#496358}.link{background:transparent;color:#285544;padding:5px;text-decoration:underline}#notice{min-height:1.3em;margin:8px 0;font-size:13px;color:#175d42}@media(max-width:760px){.layout{grid-template-columns:1fr}main{padding:16px}.hero{padding:22px}}@media print{header,.hero,aside,form,button,.no-print,.foot{display:none!important}.layout{display:block}.panel{border:0;padding:0}main{padding:0}}
+body{background:#f5f5ee}header{background:#fbfcf7;color:#163c31;border-bottom:1px solid #dce6dd;padding-block:14px}header strong{display:flex;align-items:center;gap:11px;font-size:24px}header small{background:#e7efe3;color:#214d3e;font-weight:700}.brand{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:#215543;color:#e5ebae;font:21px Georgia}
+main{max-width:1280px}.hero{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(115deg,#103c32,#27634c);color:#fcfbee;min-height:226px;padding:38px 42px;margin-bottom:24px;box-shadow:0 12px 28px #193c3220}.hero h1{font-weight:500;letter-spacing:-.04em;font-size:clamp(34px,5vw,56px);line-height:1.05}.hero p{max-width:425px;line-height:1.55;color:#e1eee2}.hero .eyebrow{color:#e7ecad}.hero-art{position:absolute;right:5%;top:50%;transform:translateY(-50%);width:300px;max-width:38%;z-index:-1}
+.panel{box-shadow:0 4px 14px #1a442e08;padding:22px}.panel .eyebrow{font-size:10px}.layout{grid-template-columns:280px minmax(0,1fr);gap:22px}h2{color:#193f34}button{transition:background .15s,box-shadow .15s}button:hover:not(:disabled){box-shadow:0 2px 7px #153e3335}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #b48327;outline-offset:2px}.patient{border:1px solid #deeadf;padding:11px 13px}.patient[aria-pressed=true]{background:#e1efe3;color:#193f34;border-color:#86aa91;box-shadow:inset 3px 0 #2f694f}.totals>div{background:#edf3e8;border:1px solid #e0eadc;padding:13px;border-radius:13px;color:#365647;font-size:12px}.totals>div:nth-child(2){background:#f7f0df;border-color:#efe5ce}.totals>div:nth-child(3){background:#eaf2ef}.totals>div:nth-child(4){background:#f1efea}.totals strong{margin-top:4px;font-size:26px;color:#163e31;font-variant-numeric:tabular-nums}.badge{font-weight:750}.badge[data-approved=true]{background:#dceee0;color:#19513a}.badge[data-approved=false]{background:#f9efd5;color:#6d4713}.fields{padding:12px;border-radius:12px;background:#f5f7f2;align-items:end}.table{margin-block:10px}th{color:#426053;background:#f3f6f1}td,th{padding:10px 8px}tbody tr:hover{background:#f9faf7}.foot{line-height:1.5}#notice:empty{min-height:0;margin:0}@media(max-width:760px){.layout{grid-template-columns:1fr}.hero{padding:26px}.hero-art{right:-30px;opacity:.25;max-width:52%}.panel{padding:17px}}@media print{.panel,.totals>div{box-shadow:none}}
+.meal-studio{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin:16px 0}.model-frame{background:radial-gradient(ellipse at 50% 30%,#3a7155,#112f28);border-radius:16px;padding:13px;color:#f7f2de;min-width:0}.model-frame canvas{display:block;width:100%;height:auto;aspect-ratio:4/3;touch-action:none;cursor:grab}.model-frame canvas:active{cursor:grabbing}.model-frame canvas:focus-visible{outline:2px solid #ead4a0}.model-head,.model-controls{display:flex;justify-content:space-between;align-items:center;gap:8px}.model-head span{font-size:11px;color:#dce8d7}.model-controls{justify-content:center}.model-controls button{background:#ffffff20;padding:6px 10px}.food-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;align-content:start}.food-gallery button{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:0;text-align:center;background:#f7f7ee;color:#214738;border:1px solid #e5eadd;padding:5px;font-size:11px;line-height:1.2}.food-gallery button[aria-pressed=true]{background:#e1eedb;border-color:#56916b}.food-gallery svg{width:45px;height:35px}.food-gallery button span{overflow-wrap:anywhere}@media(max-width:550px){.meal-studio{grid-template-columns:1fr}.model-frame canvas{max-height:255px}}@media print{.meal-studio{display:none}}
+</style>
+<header><strong><span class="brand" aria-hidden="true">✦</span> AyuDiet Connect</strong><small>SIH25024 · Demo</small></header>
+<main><section class="hero"><div class="eyebrow">Practitioner workspace</div><h1>Ayurvedic diet planning</h1><p>Build a meal plan, check portions and nutrient totals, then approve it for sharing.</p>
+<svg class="hero-art" viewBox="0 0 330 220" fill="none" aria-hidden="true"><circle cx="171" cy="111" r="96" fill="#c7e1a5" opacity=".15"/><circle cx="171" cy="111" r="81" stroke="#e7ebad" opacity=".35" stroke-dasharray="3 7"/><path d="M83 131h177c-10 42-42 63-88 63s-80-21-89-63Z" fill="#e4dcaa"/><path d="M94 149h155c-14 28-39 45-77 45s-64-17-78-45Z" fill="#b9ca8d"/><path d="M79 132h185" stroke="#faf1c9" stroke-width="5" stroke-linecap="round"/><path d="M174 131c-9-38 15-76 51-87-2 40-20 68-51 87Z" fill="#c9de91"/><path d="M171 130c-34-8-52-28-56-63 34 5 58 27 56 63Z" fill="#8fbe8a"/><path d="M172 130c8-25 25-49 42-66m-44 65c-9-18-22-31-38-42" stroke="#39694c" stroke-width="2" stroke-linecap="round"/><path d="M61 77v18m-9-9h18m200-23v18m-9-9h18" stroke="#e7ebad" stroke-width="2" stroke-linecap="round"/><circle cx="249" cy="107" r="4" fill="#e2ae5a"/><circle cx="96" cy="112" r="3" fill="#e2ae5a"/><circle cx="146" cy="48" r="3" fill="#e2ae5a"/></svg>
+</section>
+<div class="layout"><aside><section class="panel"><div class="toolbar"><h2>Patients</h2><button id="new">+ Add</button></div><p class="muted">Use fictional patient details.</p><div id="patients"></div></section><section class="panel"><h2>Follow-up</h2><form id="follow" class="stack"><label>Date<input type="date" name="date" required></label><label>Progress note<textarea name="note" required maxlength="500"></textarea></label><button>Save follow-up</button></form><div id="history"></div></section></aside>
+<article><section class="panel"><div class="eyebrow">Patient overview</div><div class="toolbar"><h2 id="person"></h2><span id="status" class="badge"></span></div><p id="profile" class="muted"></p><div class="totals" id="totals"></div></section>
+<section class="panel"><div class="toolbar"><h2>Meal plan</h2><button id="draft" class="secondary">Load sample draft</button></div><p class="foot">Nutrition and Ayurvedic labels use illustrative demo data. The sample draft is a fixed template for practitioner review.</p>
+<div class="meal-studio"><section class="model-frame" aria-label="Interactive 3D meal bowl"><div class="model-head"><strong>3D meal bowl</strong><span>Drag to rotate</span></div><canvas id="bowl" width="600" height="450" tabindex="0" aria-label="Meal bowl. Use arrow keys to rotate.">Interactive meal bowl</canvas><div class="model-controls"><button id="rotate-left" aria-label="Rotate bowl left">↶</button><button id="reset-view">Reset view</button><button id="rotate-right" aria-label="Rotate bowl right">↷</button></div></section><section aria-label="Illustrated food picker"><div class="eyebrow">Pick a food</div><div id="food-gallery" class="food-gallery"></div><p id="food-detail" class="foot" aria-live="polite"></p></section></div>
+<form id="add" class="fields"><label>Meal<select name="meal"><option>Breakfast</option><option>Lunch</option><option>Dinner</option><option>Snack</option></select></label><label style="flex:2">Food<select name="food" id="foods"></select></label><label>Grams<input name="grams" type="number" value="100" min="1" max="2000" required></label><button>Add food</button></form>
+<div class="table"><table><thead><tr><th>Meal</th><th>Food</th><th>Portion</th><th>Energy</th><th>Rasa / Virya</th><th></th></tr></thead><tbody id="items"></tbody></table></div><div class="toolbar"><button id="approve">Approve plan</button><button id="print" class="secondary">Print / Save PDF</button></div><div id="notice" role="status" aria-live="polite"></div></section></article></div><p class="foot">Demo records stay in this browser. Use sample data only.</p></main>
+<dialog id="modal"><form id="register" class="stack"><h2>Add patient</h2><label>Display name<input name="name" maxlength="60" required></label><label>Age<input type="number" name="age" min="1" max="120" required></label><label>Prakriti<select name="prakriti"><option>Unassessed</option><option>Vata</option><option>Pitta</option><option>Kapha</option><option>Mixed</option></select></label><label>Dietary notes<input name="notes" maxlength="160"></label><button>Add patient</button> <button type="button" id="cancel" class="secondary">Cancel</button></form></dialog>
+<script>
+const foods=[
+ ['Cooked rice',130,2.7,28.2,.3,'Sweet / Cooling'],['Cooked mung dal',105,7,19.2,.4,'Sweet, astringent / Cooling'],['Cooked oats',71,2.5,12,.9,'Sweet / Warming'],['Cooked carrot',35,.8,8.2,.2,'Sweet / Warming'],['Plain curd',61,3.5,4.7,3.3,'Sour / Warming'],['Apple',52,.3,13.8,.2,'Sweet, astringent / Cooling'],['Cooked chickpeas',164,8.9,27.4,2.6,'Sweet, astringent / Cooling']
+];
+const $=id=>document.getElementById(id), key='ayudiet-connect-v1';
+const template=()=>[{meal:'Breakfast',food:2,grams:180},{meal:'Lunch',food:0,grams:150},{meal:'Lunch',food:1,grams:160},{meal:'Dinner',food:3,grams:120},{meal:'Dinner',food:6,grams:120}];
+let patients;
+try{patients=JSON.parse(localStorage.getItem(key));}catch{}
+if(!Array.isArray(patients)||!patients.length)patients=[{name:'Ananya Rao (demo)',age:32,prakriti:'Unassessed',notes:'Sample vegetarian profile',items:template(),approved:false,history:[]}];
+let selected=0;
+const current=()=>patients[selected], save=()=>{try{localStorage.setItem(key,JSON.stringify(patients));return true;}catch{return false;}};
+const say=s=>{$('notice').textContent=s;};
+function row(parent,tag,value){const el=document.createElement(tag);el.textContent=value;parent.append(el);return el;}
+foods.forEach(([name],i)=>{row($('foods'),'option',name).value=i;});
+function totals(items){return items.reduce((sum,i)=>sum.map((v,j)=>v+foods[i.food][j+1]*i.grams/100),[0,0,0,0]);}
+function render(){
+ const p=current();$('patients').replaceChildren();patients.forEach((person,i)=>{const b=row($('patients'),'button',person.name);b.className='patient';b.setAttribute('aria-pressed',i===selected);row(b,'small',person.prakriti+' · '+person.age+' years');b.onclick=()=>{selected=i;say('');render();};});
+ $('person').textContent=p.name;$('profile').textContent=p.age+' years · Prakriti: '+p.prakriti+(p.notes?' · '+p.notes:'');$('status').textContent=p.approved?'Approved':'Draft';$('status').setAttribute('data-approved',p.approved);
+ $('totals').replaceChildren();totals(p.items).forEach((v,i)=>{const tile=row($('totals'),'div',['Energy','Protein','Carbs','Fat'][i]);row(tile,'strong',v.toFixed(i?1:0)+(i?' g':' kcal'));});
+ $('items').replaceChildren();p.items.forEach((item,i)=>{const f=foods[item.food], tr=row($('items'),'tr','');[item.meal,f[0],item.grams+' g',(f[1]*item.grams/100).toFixed(0)+' kcal',f[5]].forEach(s=>row(tr,'td',s));const b=row(row(tr,'td',''),'button','Remove');b.className='link';b.setAttribute('aria-label','Remove '+f[0]+' from '+item.meal);b.onclick=()=>{p.items.splice(i,1);changed('Food removed.');};});
+ if(!p.items.length)row($('items'),'tr','').append(Object.assign(document.createElement('td'),{colSpan:6,textContent:'Add a food to start this plan.'}));
+ $('approve').disabled=!p.items.length||p.approved;$('print').disabled=!p.approved;
+ $('history').replaceChildren();p.history.slice().reverse().forEach(f=>row($('history'),'p',f.date+' · '+f.note));if(!p.history.length)row($('history'),'p','No follow-ups recorded.').className='muted';
+}
+function changed(message){current().approved=false;const persisted=save();render();say(message+(persisted?'':' Browser storage is unavailable.'));}
+$('new').onclick=()=>$('modal').showModal();$('cancel').onclick=()=>$('modal').close();
+$('register').onsubmit=e=>{e.preventDefault();const d=Object.fromEntries(new FormData(e.target));if(!d.name.trim())return;patients.push({...d,name:d.name.trim(),items:[],approved:false,history:[]});selected=patients.length-1;save();e.target.reset();$('modal').close();render();say('Patient added.');};
+$('add').onsubmit=e=>{e.preventDefault();const d=new FormData(e.target);current().items.push({meal:d.get('meal'),food:Number(d.get('food')),grams:Number(d.get('grams'))});changed('Food added.');};
+$('draft').onclick=()=>{current().items.push(...template());changed('Sample meals added. Review portions before approval.');};
+$('approve').onclick=()=>{if(!current().items.length)return;current().approved=true;save();render();say('Plan approved. You can now print or save it as PDF.');};
+$('print').onclick=()=>{if(current().approved)window.print();};
+$('follow').onsubmit=e=>{e.preventDefault();const d=Object.fromEntries(new FormData(e.target));if(!d.note.trim())return;current().history.push(d);save();e.target.reset();render();say('Follow-up recorded.');};
+render();
+</script>
+<script>
+const palette=['#f0e2b1','#e4b650','#cb9e65','#ef863e','#fff5dd','#d96055','#ddb36c'];
+const canvas=$('bowl'), ctx=canvas.getContext('2d');
+const gallery=$('food-gallery');
+const cards=foods.map(([name],index)=>{
+ const button=row(gallery,'button','');
+ button.innerHTML='<svg viewBox="0 0 64 48" aria-hidden="true"><ellipse cx="32" cy="41" rx="23" ry="3" fill="#d8dfd0"/><path d="M8 27h48c-2 11-10 15-24 15S10 38 8 27" fill="#7c9a78"/><ellipse cx="32" cy="27" rx="24" ry="8" fill="#4d725a"/><path d="M12 27Q16 15 24 19Q32 9 39 19Q48 15 52 27Q32 36 12 27" fill="'+palette[index]+'"/><path d="M23 23l3-2m8 4 3-3m6 5 3-2" stroke="#70482b" stroke-opacity=".37" stroke-width="2" stroke-linecap="round"/></svg>';
+ row(button,'span',name);
+ button.onclick=()=>{$('foods').value=String(index);selectFood();};
+ return button;
+});
+function selectFood(){
+ const index=Number($('foods').value), food=foods[index];
+ cards.forEach((button,i)=>button.setAttribute('aria-pressed',i===index));
+ $('food-detail').textContent=food[1]+' kcal per 100 g · '+food[5];
+}
+$('foods').onchange=selectFood;
+selectFood();
+
+// Build the bowl from concentric rings and each ingredient from a small sphere.
+const faces=[];
+const segments=40;
+function ring(radius,height){return Array.from({length:segments},(_,i)=>{const a=i*2*Math.PI/segments;return [radius*Math.cos(a),height,radius*Math.sin(a)];});}
+const profile=[[.34,-.46],[.52,-.38],[.76,-.2],[.94,.03],[1,.22],[.96,.25],[.91,.2],[.84,.04],[.69,-.15],[.43,-.29],[.01,-.3]];
+const rings=profile.map(([r,h])=>ring(r,h));
+for(let r=0;r<rings.length-1;r++)for(let i=0;i<segments;i++){
+ const j=(i+1)%segments;
+ faces.push({points:[rings[r][i],rings[r][j],rings[r+1][j],rings[r+1][i]],color:r>=5?'#b48956':'#e8c896',shade:.85+.15*Math.cos(i*2*Math.PI/segments)});
+}
+let yaw=-.4, pitch=.53, pointer=null;
+function draw(){
+ if(!ctx)return;
+ const width=canvas.width,height=canvas.height;
+ ctx.clearRect(0,0,width,height);
+ ctx.fillStyle='#09251f66';ctx.beginPath();ctx.ellipse(width/2,height*.77,width*.30,height*.064,0,0,2*Math.PI);ctx.fill();
+ function project([x,y,z]){
+  const a=x*Math.cos(yaw)-z*Math.sin(yaw), b=x*Math.sin(yaw)+z*Math.cos(yaw);
+  const vertical=y*Math.cos(pitch)-b*Math.sin(pitch), depth=y*Math.sin(pitch)+b*Math.cos(pitch);
+  const scale=width*.29/(1-depth*.15);
+  return [width/2+a*scale,height*.53-vertical*scale,depth];
+ }
+ const projected=faces.map(face=>{const points=face.points.map(project);return {...face,points,depth:points.reduce((s,p)=>s+p[2],0)/4};});
+ const items=current().items.slice(0,12);
+ items.forEach((item,i)=>{
+  const angle=i*2.4, radius=.23+.44*Math.sqrt((i+.5)/items.length);
+  for(let grain=0;grain<9;grain++){
+   const offset=grain*2.4, spread=.031*Math.sqrt(grain);
+   const [x,y,depth]=project([radius*Math.cos(angle)+spread*Math.cos(offset),.025+grain*.011,radius*Math.sin(angle)+spread*Math.sin(offset)]);
+   projected.push({x,y,depth,color:palette[item.food],size:7+(grain%3)*2});
+  }
+ });
+ projected.sort((a,b)=>a.depth-b.depth);
+ for(const face of projected){
+  ctx.beginPath();ctx.fillStyle=face.color;
+  if(face.points){
+   ctx.globalAlpha=face.shade;
+   face.points.forEach(([x,y],i)=>i?ctx.lineTo(x,y):ctx.moveTo(x,y));
+   ctx.closePath();ctx.fill();ctx.globalAlpha=1;
+  }else{
+   const gradient=ctx.createRadialGradient(face.x-2,face.y-3,1,face.x,face.y,face.size);
+   gradient.addColorStop(0,'#fff2d0');gradient.addColorStop(.32,face.color);gradient.addColorStop(1,face.color);
+   ctx.fillStyle=gradient;ctx.arc(face.x,face.y,face.size,0,2*Math.PI);ctx.fill();
+  }
+ }
+}
+function rotate(dx,dy){yaw+=dx;pitch=Math.max(.12,Math.min(1.35,pitch+dy));draw();}
+canvas.onpointerdown=e=>{pointer={id:e.pointerId,x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId);};
+canvas.onpointermove=e=>{if(pointer?.id!==e.pointerId)return;rotate((e.clientX-pointer.x)*.016,(e.clientY-pointer.y)*.012);pointer={id:e.pointerId,x:e.clientX,y:e.clientY};};
+canvas.onlostpointercapture=()=>{pointer=null;};
+canvas.onkeydown=e=>{const moves={ArrowLeft:[-.2,0],ArrowRight:[.2,0],ArrowUp:[0,.15],ArrowDown:[0,-.15]};if(moves[e.key]){e.preventDefault();rotate(...moves[e.key]);}};
+$('rotate-left').onclick=()=>rotate(-.4,0);
+$('rotate-right').onclick=()=>rotate(.4,0);
+$('reset-view').onclick=()=>{yaw=-.4;pitch=.53;draw();};
+new MutationObserver(draw).observe($('items'),{childList:true});
+draw();
+</script></html>
